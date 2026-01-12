@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiBase.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:auth="clr-namespace:MauiBase.Pages.Auth"
+    xmlns:chat="clr-namespace:MauiBase.Pages.Chat"
+    FlyoutBehavior="Disabled">
+
+    <!-- Login (بدون Flyout) -->
+    <ShellContent
+        Route="Login"
+        ContentTemplate="{DataTemplate auth:LoginPage}" />
+
+    <!-- App بعد از لاگین -->
+    <!--<FlyoutItem
+        Route="App"
+        Title="Mesghal Chat">
+
+        <TabBar>
+
+            <ShellContent
+                Title="Chat"
+                Route="Chat"
+                ContentTemplate="{DataTemplate chat:ChatPage}" />
+
+            <ShellContent
+                Title="Profile"
+                Route="Profile"
+                ContentTemplate="{DataTemplate chat:ProfilePage}" />
+
+        </TabBar>
+    </FlyoutItem>-->
+
+</Shell>

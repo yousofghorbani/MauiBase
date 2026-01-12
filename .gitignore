@@ -1,0 +1,95 @@
+# ===============================
+# .NET / Visual Studio
+# ===============================
+bin/
+obj/
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# Rider
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/
+
+# ===============================
+# MAUI / Xamarin
+# ===============================
+**/Platforms/**/bin/
+**/Platforms/**/obj/
+
+# Android
+*.apk
+*.aab
+*.keystore
+*.jks
+android/.gradle/
+android/local.properties
+
+# iOS / MacCatalyst
+*.app
+*.ipa
+*.dSYM/
+*.xcuserstate
+*.xcworkspace/xcuserdata
+*.xcodeproj/xcuserdata
+*.xcodeproj/project.xcworkspace/xcuserdata
+*.mobileprovision
+*.p12
+
+# ===============================
+# Mac / Windows OS files
+# ===============================
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ===============================
+# Logs & temp files
+# ===============================
+*.log
+*.tmp
+*.bak
+*.swp
+
+# ===============================
+# User secrets / configs
+# ===============================
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+# ===============================
+# SQLite / Local data
+# ===============================
+*.db
+*.db3
+*.sqlite
+*.sqlite3
+
+# ===============================
+# NuGet
+# ===============================
+packages/
+*.nupkg
+.nuget/
+project.lock.json
+
+# ===============================
+# Test results
+# ===============================
+TestResults/
+coverage/
+*.coverage
+*.coveragexml

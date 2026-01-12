@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiBase.Pages.Auth.LoginPage"
+    BackgroundColor="#0F172A">
+
+    <Grid>
+        <VerticalStackLayout
+            Padding="30"
+            Spacing="20"
+            VerticalOptions="Center">
+
+            <!-- Logo -->
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="120"
+                HorizontalOptions="Center" />
+
+            <!-- Title -->
+            <Label
+                Text="Welcome Back"
+                TextColor="White"
+                FontSize="28"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Login to continue"
+                TextColor="#94A3B8"
+                HorizontalOptions="Center" />
+
+            <!-- Username -->
+            <Border
+                BackgroundColor="#1E293B"
+                Padding="12"
+                StrokeShape="RoundRectangle 12">
+                <Entry
+                    Placeholder="Username"
+                    Text="{Binding Username}"
+                    TextColor="White"
+                    PlaceholderColor="#64748B"
+                    BackgroundColor="Transparent" />
+            </Border>
+
+            <!-- Password -->
+            <Border
+                BackgroundColor="#1E293B"
+                Padding="12"
+                StrokeShape="RoundRectangle 12">
+                <Entry
+                    Placeholder="Password"
+                    IsPassword="True"
+                    Text="{Binding Password}"
+                    TextColor="White"
+                    PlaceholderColor="#64748B"
+                    BackgroundColor="Transparent" />
+            </Border>
+
+            <!-- Error Message -->
+            <Label
+                Text="{Binding ErrorMessage}"
+                TextColor="#F87171"
+                IsVisible="{Binding HasError}" />
+
+            <!-- Login Button -->
+            <Button
+                Text="Login"
+                Command="{Binding LoginCommand}"
+                
+                BackgroundColor="#38BDF8"
+                TextColor="#020617"
+                CornerRadius="12"
+                HeightRequest="50" />
+
+            <!-- Loading -->
+            <ActivityIndicator
+                IsRunning="{Binding IsBusy}"
+                IsVisible="{Binding IsBusy}"
+                Color="White" />
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
