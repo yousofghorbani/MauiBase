@@ -94,32 +94,32 @@ namespace MauiBase.APIWrappers
 
         #endregion
 
-        //#region PUT
+        #region PUT
 
-        //public async Task<TResponse?> PutAsync<TRequest, TResponse>(string url, TRequest data, bool haveBearerToken)
-        //{
-        //    await PrepareClient(haveBearerToken);
-        //    var response = await _client.PutAsJsonAsync(url, data);
-        //    response.EnsureSuccessStatusCode();
-        //    return await response.Content.ReadFromJsonAsync<TResponse>();
-        //}
+        public async Task<TResponse?> PutAsync<TRequest, TResponse>(string url, TRequest data, bool haveBearerToken)
+        {
+            await PrepareClient(haveBearerToken);
+            var response = await _client.PutAsJsonAsync(url, data);
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadFromJsonAsync<TResponse>();
+        }
 
-        //public async Task PutAsync<TRequest>(string url, TRequest data, bool haveBearerToken)
-        //{
-        //    await PrepareClient(haveBearerToken);
-        //    var response = await _client.PutAsJsonAsync(url, data);
-        //    response.EnsureSuccessStatusCode();
-        //}
+        public async Task PutAsync<TRequest>(string url, TRequest data, bool haveBearerToken)
+        {
+            await PrepareClient(haveBearerToken);
+            var response = await _client.PutAsJsonAsync(url, data);
+            response.EnsureSuccessStatusCode();
+        }
 
-        //#endregion
+        #endregion
 
-        //#region DELETE
-        //public async Task DeleteAsync(string url, bool haveBearerToken)
-        //{
-        //    await PrepareClient(haveBearerToken);
-        //    var response = await _client.DeleteAsync(url);
-        //    response.EnsureSuccessStatusCode();
-        //}
-        //#endregion
+        #region DELETE
+        public async Task DeleteAsync(string url, bool haveBearerToken)
+        {
+            await PrepareClient(haveBearerToken);
+            var response = await _client.DeleteAsync(url);
+            response.EnsureSuccessStatusCode();
+        }
+        #endregion
     }
 }
